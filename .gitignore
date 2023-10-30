@@ -4,9 +4,11 @@
 node_modules
 .pnp
 .pnp.js
+.yarn
 
 # testing
 coverage
+
 
 # next.js
 .next/
