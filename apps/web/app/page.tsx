@@ -8,7 +8,7 @@ import "ui/styles.css";
 export default function Page(): JSX.Element {
   return (
    <div className="bg-red-400">
-sdsd
+Hello world
    </div>
   );
 }
