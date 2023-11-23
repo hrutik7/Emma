@@ -17,6 +17,22 @@ module.exports = {
       },
     },
     extend: {
+      keyframes: {
+        wave: {
+          '0%': { transform: 'rotate(0.0deg)' },
+          '25%': { transform: 'rotate(94deg)' },
+          '29%': { transform: 'rotate(90deg)' },
+          '50%': { transform: 'rotate(184deg)' },
+          '54%': { transform: 'rotate(180deg)' },
+          '75%': { transform: 'rotate(274deg)' },
+          '79%': { transform: 'rotate(270deg)' },
+          '100%': { transform: 'rotate(364deg)' },
+          '102%': { transform: 'rotate(360deg)' },
+        },
+      },
+      animation: {
+        'waving-hand': 'wave 9s  infinite',
+      },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         'avro': ["Arvo","ui-serif","Georgia","Cambria","Times New Roman","Times","serif"],
@@ -65,21 +81,7 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
