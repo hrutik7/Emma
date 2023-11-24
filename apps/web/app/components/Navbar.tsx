@@ -20,11 +20,12 @@ export default function Navbar() {
     {/* <Image src='e.svg' alt='logo' width={200} height={200}/>
      */}
      <div className='font-4xl'>
-     <p className='text-6xl font-poppins text-gray-600 font-semibold text-shadow-lg shadow-red-400'>Emma</p>
+      <Image src='/emma.png' alt='logo' width={50} height={50}/>
+     {/* <p className='text-6xl font-poppins text-gray-600 font-semibold text-shadow-lg shadow-red-400'>Emma</p> */}
      </div>
     <div className="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
-    <div className='flex cursor-pointer align-middle justify-center rounded-xl h-12 p-1 w-[12rem] bg-[#2563eb]'>
-      <p className='flex text-bold font-bold font-poppins tracking-wide items-center text-lg text-white justify-center'>subscribe letter</p>
+    <div className='flex cursor-pointer align-middle justify-center rounded-xl h-12 p-1 w-[10rem] bg-[#2563eb]'>
+      <p className='flex text-bold font-bold font-ui-sans-serif tracking-wide items-center text-lg text-white justify-center'>Join waitlist</p>
     </div>
     </div>
   </nav>

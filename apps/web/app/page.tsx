@@ -12,7 +12,7 @@ import Hero from "./components/Hero";
 
 export default function Page(): JSX.Element {
   return (
-   <div className="md:mr-[20%] md:ml-[20%]">
+   <div className="md:mr-[2%] md:ml-[2%]">
   <Navbar />
   <Hero />
    </div>
