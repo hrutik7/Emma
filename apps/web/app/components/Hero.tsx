@@ -3,8 +3,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex justify-center text-inherit items-center align-middle w-[100%] mt-12">
-      <h1 className=" flex-col font-avro font-semibold tracking-wide flex  justify-center text-[4rem] w-[80%] md:w-[78%]">
+    <div className="flex gap-20 flex-col justify-center text-inherit items-center align-middle w-[100%] mt-[10%]">
+      <h1 className=" flex-col text-center font-avro font-semibold tracking-wide flex  justify-center text-[4rem] w-[80%] md:w-[78%]">
         <span> Your Personal <span className="text-[#2563EB]">Assistant</span></span>
         <span className="flex justify-center flex-col md:flex-row">  <span>Simplifying &nbsp;</span> 
         <span>
@@ -22,7 +22,11 @@ const Hero = () => {
 
            </div>
           </span> &nbsp; Life</span>
+         
       </h1>
+      <div className="bg-[#FFFF] transition delay-500 hover:bg-[#2563eb] hover:text-white text-[39px] font-poppins tracking-wide text-[#2563eb] font-bold border  border-blue-400 rounded-2xl flex justify-center items-center text-center h-[5rem] w-[15rem]">
+            Start
+          </div>
     </div>
   );
 };

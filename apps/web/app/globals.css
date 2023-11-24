@@ -66,7 +66,9 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
- 
+ body{
+  background-color: #F8F4FC
+ }
 @layer base {
   * {
     @apply border-border;

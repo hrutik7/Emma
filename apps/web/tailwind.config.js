@@ -21,17 +21,17 @@ module.exports = {
         wave: {
           '0%': { transform: 'rotate(0.0deg)' },
           '25%': { transform: 'rotate(94deg)' },
-          '29%': { transform: 'rotate(90deg)' },
+          '29%': { transform: 'rotate(88deg)' },
           '50%': { transform: 'rotate(184deg)' },
-          '54%': { transform: 'rotate(180deg)' },
+          '54%': { transform: 'rotate(178deg)' },
           '75%': { transform: 'rotate(274deg)' },
-          '79%': { transform: 'rotate(270deg)' },
+          '79%': { transform: 'rotate(268deg)' },
           '100%': { transform: 'rotate(364deg)' },
-          '102%': { transform: 'rotate(360deg)' },
+          '102%': { transform: 'rotate(358deg)' },
         },
       },
       animation: {
-        'waving-hand': 'wave 9s  infinite',
+        'waving-hand': 'wave 10s  infinite',
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
