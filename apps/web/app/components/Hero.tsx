@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
+import { SignInButton } from "@clerk/nextjs";
 const Hero = () => {
   return (
     <div className="flex gap-20 flex-col justify-center text-inherit items-center align-middle w-[100%] mt-[10%]">
@@ -25,7 +25,7 @@ const Hero = () => {
          
       </h1>
       <div className="bg-[#FFFF] transition delay-500 hover:bg-[#2563eb] hover:text-white text-[39px] font-poppins tracking-wide text-[#2563eb] font-bold border  border-blue-400 rounded-2xl flex justify-center items-center text-center h-[5rem] w-[15rem]">
-            Start
+      <SignInButton > Start</SignInButton>
           </div>
     </div>
   );
