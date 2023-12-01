@@ -7,8 +7,8 @@ const Hero = () => {
       <h1 className=" flex-col text-center font-avro font-semibold tracking-wide flex  justify-center text-[4rem] w-[80%] md:w-[78%]">
         <span> Your Personal <span className="text-[#2563EB]">Assistant</span></span>
         <span className="flex justify-center flex-col md:flex-row">  <span>Simplifying &nbsp;</span> 
-        <span>
-           <div className="w-28 h-28 pt-1 overflow-hidden rounded-3xl bg-[#EEEDFF]">
+        <span className="flex justify-center">
+           <div className="w-28 h-28 pt-1 justify-center items-center  overflow-hidden rounded-3xl bg-[#EEEDFF]">
 
             <div className="relative animate-waving-hand  w-[240px] h-[240px]  transform-gpu -ml-[50%]">
               {/* <p  className="relative  mt-[19px] ml-[86px] w-[60px] h-[60px]">💪</p> */}

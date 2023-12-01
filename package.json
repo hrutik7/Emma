@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "@clerk/nextjs": "^4.27.2",
-    "@material-tailwind/react": "^2.1.4"
+    "@material-tailwind/react": "^2.1.4",
+    "react-icons": "^4.12.0"
   }
 }
