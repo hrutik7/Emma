@@ -42,7 +42,7 @@ const Hero = () => {
       
           <div className="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
               <Link
-                href="https://tally.so/r/nraKxo"
+                href="https://tally.so/r/mVzx7J"
                 target="_blank"
                 className="w-full sm:w-max"
               >
