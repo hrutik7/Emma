@@ -17,7 +17,7 @@ export function Blur() {
 
 const Hero = () => {
   return (
-    <div className="flex gap-20 flex-col justify-center text-inherit items-center align-middle w-[100%] mt-[10%]">
+    <div className="flex gap-12 flex-col justify-center text-inherit items-center align-middle w-[100%] mt-[10%]">
     <Blur />
       <h1 className=" flex-col text-center font-avro  font-semibold tracking-wide flex  justify-center text-[4rem] w-[80%] md:w-[78%]">
         <span> Your Personal <span className="text-transparent  md:text-8xl bg-clip-text bg-gradient-to-r from-[#77a2d4] via-[#2971c7] to-[#77a2d4]">Assistant</span></span>
@@ -39,7 +39,7 @@ const Hero = () => {
           </span> &nbsp; Life</span>
          
       </h1>
-      
+      <p className="text-xl font-medium text-zinc-500 w-[60%] text-center">Empowering Your Every Day, Delivering Unmatched Support and Sophisticated Analysis for an Effortlessly Enhanced <span className="text-zinc-800">Life Experience.</span></p>
           <div className="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
               <Link
                 href="https://tally.so/r/mVzx7J"
