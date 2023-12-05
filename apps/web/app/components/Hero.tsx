@@ -1,6 +1,6 @@
-import Image from "next/image";
+
 import React from "react";
-import { SignInButton } from "@clerk/nextjs";
+
 import { ShimmerButton } from "./ShimmerButton";
 import Link from "next/link";
 export function Blur() {
