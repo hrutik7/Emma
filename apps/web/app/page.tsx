@@ -9,14 +9,8 @@ export default function Page(): JSX.Element {
   return (
     <ClerkProvider publishableKey={publicKey}>
       <div className="md:mr-[2%] md:ml-[2%]">
-        <SignedOut>
-          <Navbar />
-          <Hero />
-        </SignedOut>
-        <SignedIn>
-          <Navbar />
-          <Hero />
-        </SignedIn>
+        <Navbar />
+        <Hero />
       </div>
     </ClerkProvider>
   );
