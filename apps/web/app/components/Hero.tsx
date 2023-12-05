@@ -1,7 +1,7 @@
 import React from "react";
-
-import { ShimmerButton } from "./shimmer-button";
 import Link from "next/link";
+import { ShimmerButton } from "./shimmer-button";
+
 export function Blur() {
   return (
     <div
