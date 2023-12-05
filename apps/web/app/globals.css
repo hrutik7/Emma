@@ -3,6 +3,13 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+.gradient-text {
+  /* --bg-size: 400%; */
+  background: linear-gradient(90deg, #77a2d4, #2971c7, #77a2d4) 0 0 ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -77,3 +84,4 @@
     @apply bg-background text-foreground;
   }
 }
+

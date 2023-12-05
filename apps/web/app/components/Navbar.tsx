@@ -27,9 +27,9 @@ export default function Navbar() {
           <Image src="/emma.png" alt="logo" width={50} height={50} />
         </div>
         <div className="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
-          <div className="flex cursor-pointer align-middle justify-center rounded-xl h-12 p-1 w-[10rem] bg-[#2563eb]">
-            <p className="flex text-bold font-bold font-ui-sans-serif tracking-wide items-center text-lg text-white justify-center">
-              Join waitlist
+          <div className="flex cursor-pointer align-middle justify-center rounded-xl h-12 p-1 w-[10rem]">
+            <p className="flex text-bold font-bold font-poppins tracking-wide items-center text-lg text-slate-400 justify-center">
+              News Letter
             </p>
           </div>
         </div>

@@ -1,13 +1,28 @@
 import Image from "next/image";
 import React from "react";
 import { SignInButton } from "@clerk/nextjs";
+import { ShimmerButton } from "./ShimmerButton";
+import Link from "next/link";
+export function Blur() {
+  return (
+    <div
+      aria-hidden="true"
+      className="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20 pointer-events-none"
+    >
+      <div className="fix-safari-blur blur-[106px] h-56 bg-gradient-to-br from-cyan-500 to-blue-400"></div>
+      <div className="fix-safari-blur blur-[106px] h-32 bg-gradient-to-r from-indigo-400 to-blue-30"></div>
+    </div>
+  );
+}
+
 const Hero = () => {
   return (
     <div className="flex gap-20 flex-col justify-center text-inherit items-center align-middle w-[100%] mt-[10%]">
-      <h1 className=" flex-col text-center font-avro font-semibold tracking-wide flex  justify-center text-[4rem] w-[80%] md:w-[78%]">
-        <span> Your Personal <span className="text-[#2563EB]">Assistant</span></span>
-        <span className="flex justify-center flex-col md:flex-row">  <span>Simplifying &nbsp;</span> 
-        <span className="flex justify-center">
+    <Blur />
+      <h1 className=" flex-col text-center font-avro  font-semibold tracking-wide flex  justify-center text-[4rem] w-[80%] md:w-[78%]">
+        <span> Your Personal <span className="text-transparent  md:text-8xl bg-clip-text bg-gradient-to-r from-[#77a2d4] via-[#2971c7] to-[#77a2d4]">Assistant</span></span>
+        <span className="flex justify-center flex-col md:flex-row">  <span>Analyzing &nbsp;</span> 
+        <span className="flex justify-center -mt-20 md:mt-0">
            <div className="w-28 h-28 pt-1 justify-center items-center  overflow-hidden rounded-3xl bg-[#EEEDFF]">
 
             <div className="relative animate-waving-hand  w-[240px] h-[240px]  transform-gpu -ml-[50%]">
@@ -24,9 +39,32 @@ const Hero = () => {
           </span> &nbsp; Life</span>
          
       </h1>
-      <div className="bg-[#FFFF] transition delay-500 hover:bg-[#2563eb] hover:text-white text-[39px] font-poppins tracking-wide text-[#2563eb] font-bold border  border-blue-400 rounded-2xl flex justify-center items-center text-center h-[5rem] w-[15rem]">
-      <SignInButton > Start</SignInButton>
-          </div>
+      
+          <div className="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+              <Link
+                href="https://tally.so/r/nraKxo"
+                target="_blank"
+                className="w-full sm:w-max"
+              >
+                <ShimmerButton
+                  className="relative w-full sm:w-max flex items-center justify-center transition-all hover:shadow-[0_0_0_3px_rgba(255,255,255,0.3)_inset]"
+                  background="#2971c7"
+                >
+                  <span className="relative whitespace-pre text-center text-base font-semibold leading-none tracking-tight text-white z-10">
+                    Join the waitlist →
+                  </span>
+                </ShimmerButton>
+              </Link>
+              <Link
+                target="_blank"
+                href="https://cal.com/hrutik/15min"
+                className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-blue-600/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+              >
+                <span className="relative text-base font-semibold text-[#2971c7]">
+                  Book a call
+                </span>
+              </Link>
+            </div>
     </div>
   );
 };
