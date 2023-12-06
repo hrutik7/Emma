@@ -1,7 +1,7 @@
 import { ClerkProvider, SignedOut, SignedIn } from "@clerk/nextjs";
 import "ui/styles.css";
-import Hero from "./components/hero";
-import Navbar from "./components/Navbar";
+import Hero from "./components/herosection";
+import Navbar from "./components/Nav";
 
 
 export default function Page(): JSX.Element {
