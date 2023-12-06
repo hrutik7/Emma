@@ -1,6 +1,6 @@
 "use client";
 
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -29,12 +29,10 @@ export default function Navbar() {
             <p className="flex text-base font-semibold font-poppins tracking-wide items-center text-slate-400 justify-center">
               Newsletter
             </p>
-
-            
           </div>
           <span className="relative text-base font-semibold text-[#2971c7]">
-                  Register
-                </span>
+            Register
+          </span>
         </div>
       </nav>
     </header>
