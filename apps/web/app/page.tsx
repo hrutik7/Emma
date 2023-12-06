@@ -1,7 +1,7 @@
 import { ClerkProvider, SignedOut, SignedIn } from "@clerk/nextjs";
 import "ui/styles.css";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Hero from "./components/hero";
 
 export default function Page(): JSX.Element {
   const publicKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
