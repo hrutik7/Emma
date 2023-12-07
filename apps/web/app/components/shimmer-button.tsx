@@ -8,7 +8,7 @@ interface ShimmerButtonProps {
   background?: string;
   className?: string;
   children?: React.ReactNode;
-  [key: string]: any; // ...props
+  [key: string]: any; 
 }
 
 export const ShimmerButton = ({
