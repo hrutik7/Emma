@@ -1,4 +1,4 @@
-import { ClerkProvider, SignedOut, SignedIn } from "@clerk/nextjs";
+import { ClerkProvider} from "@clerk/nextjs";
 import "ui/styles.css";
 import Hero from "./components/herosection";
 import Navbar from "./components/nav-bar";
