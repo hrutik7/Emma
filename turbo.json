@@ -1,6 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local","**/.env.*dev",".env","NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY"],
+  "globalDependencies": ["**/.env.*local","**/.env.*dev",".env","NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,CLERK_SECRET_KEY"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
