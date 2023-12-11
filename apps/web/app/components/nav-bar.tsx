@@ -2,17 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 export default function Navbar() {
   const [nav, setNav] = useState(false);
   return (
@@ -30,9 +20,16 @@ export default function Navbar() {
               Newsletter
             </p>
           </div>
-          <span className="relative text-base font-semibold text-[#2971c7]">
+         <SignedOut>
+         <span className="relative text-base font-semibold text-[#2971c7]">
             Register
           </span>
+         </SignedOut>
+         <SignedIn>
+         <span className="relative text-base font-semibold text-[#2971c7]">
+            Logout
+          </span>
+         </SignedIn>
         </div>
       </nav>
     </header>
