@@ -1,25 +1,69 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model users {
-  id        String   @id @default(uuid()) @unique
-  email     String
+  id              String            @id @unique @default(uuid())
+  email           String            @unique
+  TaskTodo        TaskTodo[]
+  AmbitiousGoal   AmbitiousGoal[]
+  Progress        Progress[]
+  OverallProgress OverallProgress[]
+  createdAt       DateTime          @default(now())
+}
+
+model Progress{
+  id        String   @id @unique @default(uuid())
+  progress  Int
   createdAt DateTime @default(now())
-  updatedAt DateTime @default(now()) @updatedAt
+  user      users?   @relation(fields: [userId], references: [id])
+  userId    String?
+}
+
+model OverallProgress{
+  id           String   @id @unique @default(uuid())
+  mindfullness Int
+  physical     Int
+  social       Int
+  financial    Int
+  user         users?   @relation(fields: [userId], references: [id])
+  userId       String   
+}
+model AmbitiousGoal {
+  id        String   @id @unique @default(uuid())
+  goaltitle String
+  goalend   DateTime
+  createdAt DateTime @default(now())
+  user      users?   @relation(fields: [userId], references: [id])
+  userId    String?
+}
+
+model TaskTodo {
+  id        String     @id @unique @default(uuid())
+  tasktitle String
+  status    String
+  taskstart DateTime
+  taskend   DateTime
+  tasktype  TaskType[]
+  createdAt DateTime   @default(now())
+  user      users?     @relation(fields: [userId], references: [id])
+  userId    String?
+}
+
+model TaskType {
+  id         String   @id @unique @default(uuid())
+  tasktype   String
+  createdAt  DateTime @default(now())
+  TaskTodo   TaskTodo @relation(fields: [taskTodoId], references: [id])
+  taskTodoId String
 }
 
 model waitingList {
-  id        String   @id @default(uuid()) @unique
-  email     String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @default(now()) @updatedAt
+  id    String @id @unique @default(uuid())
+  email String
 }
