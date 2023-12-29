@@ -2962,6 +2962,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"copy-anything@npm:^3.0.2":
+  version: 3.0.5
+  resolution: "copy-anything@npm:3.0.5"
+  dependencies:
+    is-what: "npm:^4.1.8"
+  checksum: 01eadd500c7e1db71d32d95a3bfaaedcb839ef891c741f6305ab0461398056133de08f2d1bf4c392b364e7bdb7ce498513896e137a7a183ac2516b065c28a4fe
+  languageName: node
+  linkType: hard
+
 "core-js-pure@npm:^3.30.2":
   version: 3.34.0
   resolution: "core-js-pure@npm:3.34.0"
@@ -3374,6 +3383,7 @@ __metadata:
     husky: "npm:^8.0.3"
     nodemon: "npm:^3.0.2"
     prisma: "npm:^5.7.1"
+    superjson: "npm:^2.2.1"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.3.3"
     zod: "npm:^3.22.4"
@@ -5334,6 +5344,13 @@ __metadata:
     call-bind: "npm:^1.0.2"
     get-intrinsic: "npm:^1.1.1"
   checksum: ef5136bd446ae4603229b897f73efd0720c6ab3ec6cc05c8d5c4b51aa9f95164713c4cad0a22ff1fedf04865ff86cae4648bc1d5eead4b6388e1150525af1cc1
+  languageName: node
+  linkType: hard
+
+"is-what@npm:^4.1.8":
+  version: 4.1.16
+  resolution: "is-what@npm:4.1.16"
+  checksum: 611f1947776826dcf85b57cfb7bd3b3ea6f4b94a9c2f551d4a53f653cf0cb9d1e6518846648256d46ee6c91d114b6d09d2ac8a07306f7430c5900f87466aae5b
   languageName: node
   linkType: hard
 
@@ -7963,6 +7980,15 @@ __metadata:
     sucrase: bin/sucrase
     sucrase-node: bin/sucrase-node
   checksum: 83e524f2b9386c7029fc9e46b8d608485866d08bea5a0a71e9e3442dc12e1d05a5ab555808d1922f45dd012fc71043479d778aac07391d9740daabe45730a056
+  languageName: node
+  linkType: hard
+
+"superjson@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "superjson@npm:2.2.1"
+  dependencies:
+    copy-anything: "npm:^3.0.2"
+  checksum: 5d8202c955170bd98ef2647f712754ac54d2d007923cfdb53a4b035304d8964b8c41d5eff41ee277896e2ac32e06abb009b571f1589416b729fe40216320cc7a
   languageName: node
   linkType: hard
 

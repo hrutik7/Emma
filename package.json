@@ -19,7 +19,7 @@
   "packageManager": "yarn@4.0.2",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/Backend"
   ],
   "dependencies": {
     "@clerk/nextjs": "^4.27.4",
