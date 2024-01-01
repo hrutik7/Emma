@@ -1,49 +1,20 @@
 import { z } from "zod";
 import { publicProcedure, router } from "./trpc";
-import { createHTTPServer } from "@trpc/server/adapters/standalone";
 import express from "express";
 import * as trpc from "@trpc/server";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import connectDB from "./utils/prisma";
 import cors from "cors";
-import { inferAsyncReturnType } from "@trpc/server";
-import superjson from "superjson";
-import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
-import { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
+
 type CreateContextOptions = Record<string, never>;
 
 const usersSchema = z.object({
   id: z.string(),
   email: z.string().email(),
-  // TaskToDo: z.object({
-  //   id: z.string(),
-  //   tasktitle: z.string(),
-  //   status: z.string(),
-  //   taskstart: z.coerce.date(),
-  //   taskend: z.coerce.date(),
-  //   TaskType: z.object({
-  //     id: z.string(),
-  //     tasktype: z.string(),
-  //   }),
-  //   AmbitiosGoal: z.object({
-  //     id: z.string(),
-  //     goaltitle: z.string(),
-  //     goalend: z.coerce.date(),
-  //   }),
-  //   Progress: z.object({
-  //     id: z.string(),
-  //     progress: z.number(),
-  //   }),
-  //   OverallProgress: z.object({
-  //     id: z.string(),
-  //     mindfullness: z.number(),
-  //     physical: z.number(),
-  //     social: z.number(),
-  //     financial: z.number(),
-  //   }),
+});
 
-  //   createdAt: z.coerce.date(),
-  // }),
+const updateUserSchema = z.object({
+  email: z.string().email(),
 });
 
 const app = express();
@@ -54,18 +25,33 @@ const appRouter = router({
   }),
   userList: publicProcedure.query(async ({ ctx }: any) => {
     const users = await prisma?.users.findMany();
-    // console.log("ctx.prisma.user.findMany() 🔥🔥🔥🔥🔥🔥🔥",ctx.res )
     return users;
   }),
   createUser: publicProcedure.input(usersSchema).mutation(async (input) => {
     const userInput = input.input;
-    console.log(userInput,"userInput 🔥🔥🔥🔥🔥🔥🔥");
     const user = await prisma?.users.createMany({
       data: userInput,
     });
-    
+
     return user;
   }),
+  updateUser: publicProcedure
+    .input(updateUserSchema)
+    .mutation(async (input) => {
+      console.log(input,"input ✅✅")
+      const userInput = input.input;
+      const user = await prisma?.users.updateMany({
+        where: {
+          email: userInput.email,
+        },
+        data: {
+          email: userInput.email,
+        }
+      });
+
+      return user;
+    }),
+
 });
 
 const createInnerTRPCContext = (opts: CreateContextOptions) => {
