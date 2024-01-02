@@ -1,6 +1,6 @@
 import {z} from "zod";
 import { TRPCError } from "@trpc/server";
-import {publicProcedure} from "../../trpc";
+import {createTRPCRouter, publicProcedure} from "../../trpc";
 import {  Prisma, type PrismaClient } from "@prisma/client";
 
 const usersSchema = z.object({
@@ -12,6 +12,14 @@ const usersSchema = z.object({
     email: z.string().email(),
   });
 
-export async function getUser(){
+  const getUsers = async () => {
+    const users = await prisma?.users.findMany();
+    return users;
+  }
 
-}
+  export const userRouter = createTRPCRouter({
+     users : publicProcedure.query(async()=>{
+      const users = await prisma?.users.findMany();
+      return users;
+    })
+  })
