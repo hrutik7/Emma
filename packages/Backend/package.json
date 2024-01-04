@@ -9,6 +9,7 @@
     "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
+    "@clerk/backend": "^0.37.0",
     "@prisma/client": "^5.7.1",
     "@trpc/server": "^10.44.1",
     "@types/express": "^4.17.21",
